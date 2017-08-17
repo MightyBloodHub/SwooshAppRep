@@ -8,8 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    @IBOutlet weak var swoosh: UIImageView!
+class WelcomeVC: UIViewController {
+    
+    @IBAction func onNextTapped(_ sender: Any) {
+        performSegue(withIdentifier: "LeagueVCSegue", sender: self)
+    }
+    /*@IBOutlet weak var swoosh: UIImageView!
     
     @IBOutlet weak var bgImg: UIImageView!
     @IBOutlet weak var swooshLogo: UIImageView!
@@ -17,7 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var allOutText: UILabel!
     @IBOutlet weak var startBtn: BorderButton!
     
-    @IBOutlet weak var goAllInText: UILabel!
+    @IBOutlet weak var goAllInText: UILabel!*/
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -39,6 +43,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func unwindFromSkillVC(unwindSegue: UIStoryboardSegue){}
 
 
 }
